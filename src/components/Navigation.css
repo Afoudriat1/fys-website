@@ -1,0 +1,89 @@
+.navigation {
+  background-color: #ffffff;
+  border-bottom: 3px solid #000000;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  text-decoration: none;
+  color: #000000;
+}
+
+.logo h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-family: 'Arial Black', 'Arial Bold', sans-serif;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-button {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: 'Arial Black', 'Arial Bold', sans-serif;
+  padding: 12px 24px;
+  border: 3px solid #000000;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.nav-button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.nav-button.active {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .logo h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
