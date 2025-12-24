@@ -7,15 +7,42 @@ function Layout({ children, pageTitle }) {
   const isHomePage = location.pathname === '/';
   const isMusicPage = location.pathname === '/music';
   const isContactPage = location.pathname === '/contact';
+  const isDonatePage = location.pathname === '/donate';
 
   return (
     <div className="layout">
-      {!isHomePage && !isMusicPage && !isContactPage && (
+      {!isHomePage && !isMusicPage && !isContactPage && !isDonatePage && (
         <>
           <Link to="/" className="home-link">
             FREE YOUTH SERVICES
           </Link>
           <h1 className="page-title-below-button">{pageTitle}</h1>
+        </>
+      )}
+      {isDonatePage && (
+        <>
+          <Link to="/" className="home-link">
+            FREE YOUTH SERVICES
+          </Link>
+          <div 
+            className="title-background-wrapper"
+            style={{
+              backgroundImage: 'url(/Donate.jpeg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              position: 'relative',
+              padding: '150px 20px',
+              marginBottom: '40px',
+              minHeight: '500px'
+            }}
+          >
+            <div className="header-overlay"></div>
+            <div className="title-content">
+              <h1 className="main-title">{pageTitle}</h1>
+              <h2 className="mission-subheader">Every contribution makes a difference.</h2>
+            </div>
+          </div>
         </>
       )}
       {isContactPage && (
