@@ -19,7 +19,7 @@ function Contact() {
               <span className="contact-title">MANAGING DIRECTOR</span>
             </div>
             <p className="contact-about">
-              About information for Bosch Purvis goes here. This paragraph provides details about the managing director's background, experience, and role at Free Youth Services.
+            Bosch Purvis is the managing director of Free Youth Services and the primary facilitator of Bars Beyond Bars. Currently he records and produces all of the music made.
             </p>
           </div>
           <div className="contact-details">
@@ -29,7 +29,7 @@ function Contact() {
             </div>
             <div className="contact-item">
               <span className="contact-label">EMAIL</span>
-              <a href="mailto:Bosch@freeyouthservices.org" className="contact-link">Bosch@freeyouthservices.org</a>
+              <a href="mailto:Bosch@freeyouthservices.org" className="contact-link">Bosch@freeyouthservices.com</a>
             </div>
           </div>
         </div>

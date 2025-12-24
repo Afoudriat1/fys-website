@@ -2,6 +2,8 @@
   min-height: 100vh;
   background-color: #ffffff;
   position: relative;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .home-link {
@@ -57,6 +59,9 @@
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .title-content {
@@ -64,6 +69,14 @@
   margin: 0 auto;
   position: relative;
   z-index: 1;
+}
+
+.title-background-wrapper .title-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-overlay {
@@ -111,6 +124,10 @@
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.title-background-wrapper .mission-subheader {
+  font-size: 2.2rem;
 }
 
 .home-subheader {
@@ -197,62 +214,135 @@
   .home-link {
     top: 10px;
     left: 10px;
-    font-size: 0.8rem;
-    padding: 6px 12px;
+    font-size: 0.75rem;
+    padding: 6px 10px;
+    letter-spacing: 0.1em;
   }
 
   .page-title-below-button {
-    font-size: 2.5rem;
+    font-size: 2rem;
     letter-spacing: 0.1em;
-    margin: 80px auto 30px;
-    max-width: calc(100% - 200px);
-    padding: 0 20px;
+    margin: 70px auto 30px;
+    padding: 0 15px;
+    word-wrap: break-word;
   }
 
   .layout-header {
-    padding: 40px 20px 30px;
+    padding: 30px 15px 20px;
+  }
+
+  .title-background-wrapper {
+    padding: 60px 15px !important;
+    min-height: 300px !important;
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   .main-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     letter-spacing: 0.1em;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    padding: 0 10px;
+    word-wrap: break-word;
   }
 
   .mission-subheader {
-    font-size: 1.1rem;
-    padding: 0 10px;
+    font-size: 1rem;
+    padding: 0 15px;
+    line-height: 1.5;
+  }
+
+  .title-background-wrapper .mission-subheader {
+    font-size: 1.2rem;
+    padding: 0 15px;
   }
 
   .home-subheader {
-    font-size: 1.5rem;
-    letter-spacing: 0.15em;
-    margin: 20px 0 50px 0;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+    margin: 20px 0 40px 0;
+    padding: 0 15px;
   }
 
   .nav-buttons {
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
     width: 100%;
-    margin-top: 60px;
-    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 0 15px;
   }
 
   .nav-button {
     width: 100%;
     text-align: center;
+    padding: 14px 20px;
+    font-size: 1rem;
   }
 
   .about-section {
-    padding-top: 30px;
+    padding-top: 25px;
+    margin: 30px 15px 0;
   }
 
   .about-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .about-text {
+    font-size: 0.95rem;
+    padding: 0 10px;
+    line-height: 1.6;
+  }
+
+  .layout-content {
+    padding: 30px 15px 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-link {
+    font-size: 0.7rem;
+    padding: 5px 8px;
+    top: 8px;
+    left: 8px;
+  }
+
+  .main-title {
+    font-size: 1.6rem;
+    letter-spacing: 0.08em;
+  }
+
+  .title-background-wrapper {
+    padding: 50px 10px !important;
+    min-height: 250px !important;
+  }
+
+  .mission-subheader {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+
+  .title-background-wrapper .mission-subheader {
     font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .nav-button {
+    font-size: 0.9rem;
+    padding: 12px 16px;
+  }
+
+  .about-text {
+    font-size: 0.9rem;
+  }
+
+  .page-title-below-button {
+    font-size: 1.6rem;
+    margin: 60px auto 25px;
   }
 }
 

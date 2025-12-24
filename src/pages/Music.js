@@ -1,5 +1,4 @@
 import React from 'react';
-import BarsModal from '../components/BarsModal';
 import './Page.css';
 
 function Music() {
@@ -80,10 +79,6 @@ function Music() {
           <div className="soundcloud-attribution">
             <a href="https://soundcloud.com/barsbeyondbarsny" title="Bars Beyond Bars" target="_blank" rel="noopener noreferrer">Bars Beyond Bars</a> · <a href="https://soundcloud.com/barsbeyondbarsny/locked-in-2" title="Locked In" target="_blank" rel="noopener noreferrer">Locked In</a>
           </div>
-        </div>
-        
-        <div className="bars-button-wrapper">
-          <BarsModal />
         </div>
       </div>
     </div>

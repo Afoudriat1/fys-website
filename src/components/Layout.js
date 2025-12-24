@@ -1,21 +1,72 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import BarsModal from './BarsModal';
 import './Layout.css';
 
 function Layout({ children, pageTitle }) {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
   const isMusicPage = location.pathname === '/music';
+  const isContactPage = location.pathname === '/contact';
 
   return (
     <div className="layout">
-      {!isHomePage && (
+      {!isHomePage && !isMusicPage && !isContactPage && (
         <>
           <Link to="/" className="home-link">
             FREE YOUTH SERVICES
           </Link>
           <h1 className="page-title-below-button">{pageTitle}</h1>
+        </>
+      )}
+      {isContactPage && (
+        <>
+          <Link to="/" className="home-link">
+            FREE YOUTH SERVICES
+          </Link>
+          <div 
+            className="title-background-wrapper"
+            style={{
+              backgroundImage: 'url(/Contact.jpeg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              position: 'relative',
+              padding: '150px 20px',
+              marginBottom: '40px',
+              minHeight: '500px'
+            }}
+          >
+            <div className="header-overlay"></div>
+            <div className="title-content">
+              <h1 className="main-title">{pageTitle}</h1>
+            </div>
+          </div>
+        </>
+      )}
+      {isMusicPage && (
+        <>
+          <Link to="/" className="home-link">
+            FREE YOUTH SERVICES
+          </Link>
+          <div 
+            className="title-background-wrapper"
+            style={{
+              backgroundImage: 'url(/Record_pic.jpeg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center 25%',
+              backgroundRepeat: 'no-repeat',
+              position: 'relative',
+              padding: '150px 20px',
+              marginBottom: '40px',
+              minHeight: '500px'
+            }}
+          >
+            <div className="header-overlay"></div>
+            <div className="title-content">
+              <h1 className="main-title">{pageTitle}</h1>
+              <h2 className="mission-subheader">Bars Beyond Bars produces 2,000 songs annually featuring the original lyrics and voices of incarcerated youth ages 14-21.</h2>
+            </div>
+          </div>
         </>
       )}
       {isHomePage && (

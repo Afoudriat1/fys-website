@@ -227,14 +227,16 @@
 
 @media (max-width: 768px) {
   .page-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     letter-spacing: 0.1em;
+    padding: 0 15px;
   }
 
   .home-subheader {
-    font-size: 1.5rem;
-    letter-spacing: 0.15em;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
     margin-bottom: 20px;
+    padding: 0 15px;
   }
 
   .home-image {
@@ -243,18 +245,25 @@
   }
 
   .page-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    padding: 0 15px;
   }
 
   .contact-layout {
     flex-direction: column;
     text-align: center;
-    gap: 40px;
-    padding: 10px;
+    gap: 30px;
+    padding: 15px;
   }
 
   .contact-photo-section {
     flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .contact-photo {
     width: 100%;
     max-width: 320px;
     margin: 0 auto;
@@ -262,58 +271,112 @@
 
   .contact-info-section {
     text-align: center;
-    gap: 30px;
+    gap: 25px;
+    width: 100%;
   }
 
   .contact-header {
-    padding-bottom: 25px;
+    padding-bottom: 20px;
+    width: 100%;
   }
 
   .contact-name-row {
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    justify-content: center;
   }
 
   .contact-name {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    text-align: center;
   }
 
   .contact-title {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    text-align: center;
   }
 
   .contact-about {
-    font-size: 1rem;
+    font-size: 0.95rem;
     text-align: left;
     margin: 0 auto;
+    padding: 0 10px;
+    max-width: 100%;
+  }
+
+  .contact-details {
+    width: 100%;
+    align-items: center;
   }
 
   .contact-item {
     align-items: center;
-    padding: 12px 0;
+    padding: 10px 0;
+    width: 100%;
   }
 
   .contact-label {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
   .contact-link {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    word-break: break-word;
   }
 
   .soundcloud-section {
-    margin: 30px 0;
-    padding: 0 10px;
+    margin: 25px 0;
+    padding: 0 15px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .soundcloud-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    padding: 0 10px;
   }
 
   .soundcloud-player {
-    height: 250px;
+    height: 200px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .soundcloud-attribution {
+    font-size: 9px;
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-name {
+    font-size: 1.4rem;
+  }
+
+  .contact-title {
+    font-size: 0.9rem;
+  }
+
+  .contact-link {
+    font-size: 1.1rem;
+  }
+
+  .contact-about {
+    font-size: 0.9rem;
+  }
+
+  .soundcloud-player {
+    height: 180px;
+  }
+
+  .soundcloud-section {
+    padding: 0 10px;
   }
 }
 
