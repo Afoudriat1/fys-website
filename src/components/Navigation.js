@@ -18,17 +18,17 @@ function Navigation() {
           >
             MUSIC
           </Link>
-          <Link 
-            to="/donate" 
+          <Link
+            to="/donate"
             className={`nav-button ${location.pathname === '/donate' ? 'active' : ''}`}
           >
             DONATE
           </Link>
-          <Link 
-            to="/contact" 
+          <Link
+            to="/contact"
             className={`nav-button ${location.pathname === '/contact' ? 'active' : ''}`}
           >
-            CONTACT
+            OUR COMMUNITY
           </Link>
         </div>
       </div>

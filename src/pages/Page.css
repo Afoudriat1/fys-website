@@ -1,103 +1,53 @@
 .page {
-  background-color: #ffffff;
+  background-color: var(--clr-bg);
 }
 
 .page-content {
   text-align: center;
 }
 
-.page-title {
-  font-size: 3rem;
-  font-weight: 900;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-family: 'Arial Black', 'Arial Bold', sans-serif;
-  color: #000000;
-  margin: 0 0 30px 0;
-  line-height: 1.2;
-}
-
-.home-subheader {
-  font-size: 2rem;
-  font-weight: 900;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-family: 'Arial Black', 'Arial Bold', sans-serif;
-  color: #000000;
-  margin: 0 0 30px 0;
-  line-height: 1.2;
-}
-
-.home-image {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  border: 2px solid #000000;
-  display: block;
-  margin: 0 auto 30px auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
 .page-description {
-  font-size: 1.3rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: #000000;
-  line-height: 1.6;
-  max-width: 800px;
+  font-family: var(--ff-body);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--clr-ink-2);
+  line-height: 1.85;
+  max-width: 680px;
   margin: 0 auto;
 }
 
-.content-section {
-  margin-top: 0;
-}
-
+/* SoundCloud section */
 .soundcloud-section {
-  margin: 40px 0;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.soundcloud-title {
-  font-size: 1.5rem;
-  font-weight: 900;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  font-family: 'Arial Black', 'Arial Bold', sans-serif;
-  color: #000000;
-  margin: 0 0 20px 0;
-  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .soundcloud-player {
   width: 100%;
-  max-width: 100%;
-  border: 2px solid #000000;
-  margin: 0 auto 10px auto;
+  border: 1px solid var(--clr-border);
+  border-radius: 6px;
   display: block;
+  margin-bottom: 6px;
 }
 
 .soundcloud-attribution {
-  font-size: 10px;
-  color: #cccccc;
-  line-break: anywhere;
-  word-break: normal;
+  font-family: var(--ff-body);
+  font-size: 11px;
+  color: var(--clr-ink-3);
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-  font-weight: 100;
-  margin-top: 5px;
+  margin-bottom: 28px;
   text-align: left;
 }
 
 .soundcloud-attribution a {
-  color: #cccccc;
+  color: var(--clr-ink-3);
   text-decoration: none;
 }
 
 .soundcloud-attribution a:hover {
+  color: var(--clr-ink);
   text-decoration: underline;
 }
 
@@ -109,26 +59,33 @@
   position: relative;
 }
 
+/* Contact page */
 .contact-layout {
   display: flex;
-  gap: 60px;
+  gap: 64px;
   align-items: flex-start;
   text-align: left;
-  max-width: 1200px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0;
+}
+
+.contact-layout--second {
+  margin-top: 96px;
+  padding-top: 96px;
+  border-top: 1px solid var(--clr-border);
 }
 
 .contact-photo-section {
-  flex: 0 0 320px;
+  flex: 0 0 260px;
 }
 
 .contact-photo {
   width: 100%;
   height: auto;
-  border: 2px solid #000000;
+  border-radius: 6px;
   display: block;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
   object-fit: cover;
 }
 
@@ -136,142 +93,123 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 32px;
+  min-width: 0;
 }
 
 .contact-header {
-  padding-bottom: 30px;
-  border-bottom: 2px solid #000000;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--clr-border);
 }
 
 .contact-name-row {
   display: flex;
   align-items: baseline;
-  gap: 25px;
-  margin-bottom: 25px;
+  gap: 16px;
+  margin-bottom: 20px;
   flex-wrap: wrap;
 }
 
 .contact-name {
-  font-size: 2.2rem;
-  font-weight: 900;
-  letter-spacing: 0.15em;
+  font-family: var(--ff-display);
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  font-family: 'Arial Black', 'Arial Bold', sans-serif;
-  color: #000000;
+  color: var(--clr-ink);
   margin: 0;
   line-height: 1.2;
 }
 
 .contact-title {
-  font-size: 1.3rem;
+  font-family: var(--ff-display);
+  font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  font-family: 'Arial Black', 'Arial Bold', sans-serif;
-  color: #333333;
-  padding: 4px 12px;
-  border: 2px solid #000000;
+  color: var(--clr-amber);
+  padding: 4px 10px;
+  border: 1.5px solid var(--clr-amber);
+  border-radius: 4px;
   display: inline-block;
+  white-space: nowrap;
 }
 
 .contact-about {
-  font-size: 1.1rem;
+  font-family: var(--ff-body);
+  font-size: 1rem;
   font-weight: 400;
-  letter-spacing: 0.03em;
-  color: #333333;
+  color: var(--clr-ink-2);
   line-height: 1.8;
   margin: 0;
-  max-width: 600px;
+  max-width: 520px;
 }
 
 .contact-details {
   display: flex;
-  flex-direction: column;
-  gap: 25px;
+  flex-direction: row;
+  gap: 48px;
+  flex-wrap: wrap;
 }
 
 .contact-item {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 15px 0;
+  gap: 5px;
+  padding: 18px 0;
 }
 
 .contact-label {
-  font-size: 0.9rem;
-  font-weight: 900;
-  letter-spacing: 0.15em;
+  font-family: var(--ff-display);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  font-family: 'Arial Black', 'Arial Bold', sans-serif;
-  color: #666666;
-  margin-bottom: 5px;
+  color: var(--clr-ink-3);
 }
 
 .contact-link {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: #000000;
+  font-family: var(--ff-body);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--clr-ink);
   text-decoration: none;
   display: inline-block;
-  transition: all 0.3s ease;
-  padding: 8px 0;
-  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease;
 }
 
 .contact-link:hover {
-  border-bottom-color: #000000;
-  padding-bottom: 6px;
+  color: var(--clr-amber);
 }
 
+/* Responsive */
 @media (max-width: 768px) {
-  .page-title {
-    font-size: 1.8rem;
-    letter-spacing: 0.1em;
-    padding: 0 15px;
-  }
-
-  .home-subheader {
-    font-size: 1.3rem;
-    letter-spacing: 0.1em;
-    margin-bottom: 20px;
-    padding: 0 15px;
-  }
-
-  .home-image {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
   .page-description {
-    font-size: 1rem;
-    padding: 0 15px;
+    font-size: 0.95rem;
+    padding: 0 4px;
   }
 
   .contact-layout {
     flex-direction: column;
     text-align: center;
-    gap: 30px;
-    padding: 15px;
+    gap: 28px;
   }
 
   .contact-photo-section {
     flex: 0 0 auto;
     width: 100%;
-    max-width: 100%;
+    max-width: 240px;
     margin: 0 auto;
   }
 
   .contact-photo {
     width: 100%;
-    max-width: 320px;
     margin: 0 auto;
   }
 
   .contact-info-section {
     text-align: center;
-    gap: 25px;
+    gap: 24px;
     width: 100%;
   }
 
@@ -282,27 +220,19 @@
 
   .contact-name-row {
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
     justify-content: center;
   }
 
   .contact-name {
-    font-size: 1.6rem;
-    text-align: center;
-  }
-
-  .contact-title {
-    font-size: 1rem;
-    text-align: center;
+    font-size: 1.5rem;
   }
 
   .contact-about {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     text-align: left;
-    margin: 0 auto;
-    padding: 0 10px;
     max-width: 100%;
   }
 
@@ -313,70 +243,35 @@
 
   .contact-item {
     align-items: center;
-    padding: 10px 0;
+    padding: 14px 0;
     width: 100%;
   }
 
-  .contact-label {
-    font-size: 0.8rem;
-  }
-
   .contact-link {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     word-break: break-word;
   }
 
   .soundcloud-section {
-    margin: 25px 0;
-    padding: 0 15px;
+    padding: 0;
     width: 100%;
-    box-sizing: border-box;
-  }
-
-  .soundcloud-title {
-    font-size: 1.1rem;
-    padding: 0 10px;
   }
 
   .soundcloud-player {
     height: 200px;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .soundcloud-attribution {
-    font-size: 9px;
-    padding: 0 5px;
   }
 }
 
 @media (max-width: 480px) {
-  .page-title {
-    font-size: 1.5rem;
-  }
-
   .contact-name {
-    font-size: 1.4rem;
-  }
-
-  .contact-title {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
   }
 
   .contact-link {
-    font-size: 1.1rem;
-  }
-
-  .contact-about {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .soundcloud-player {
     height: 180px;
   }
-
-  .soundcloud-section {
-    padding: 0 10px;
-  }
 }
-

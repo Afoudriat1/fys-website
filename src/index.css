@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --ff-display: 'Montserrat', sans-serif;
+  --ff-body: 'Inter', sans-serif;
+
+  --clr-bg: #F9F8F6;
+  --clr-surface: #FFFFFF;
+  --clr-ink: #0F172A;
+  --clr-ink-2: #374151;
+  --clr-ink-3: #6B7280;
+  --clr-border: #E5E7EB;
+  --clr-border-strong: #9CA3AF;
+  --clr-amber: #111827;
+  --clr-amber-dark: #000000;
+  --clr-amber-light: rgba(17, 24, 39, 0.06);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,17 +23,10 @@
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--ff-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffffff;
+  background-color: var(--clr-bg);
+  color: var(--clr-ink);
+  line-height: 1.6;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-

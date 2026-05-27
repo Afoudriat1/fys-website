@@ -1,0 +1,139 @@
+/* Intro section */
+.music-intro {
+  max-width: 720px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.music-eyebrow {
+  display: block;
+  font-family: var(--ff-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-ink-3);
+  margin-bottom: 10px;
+}
+
+.music-intro-title {
+  font-family: var(--ff-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--clr-ink);
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.music-intro-text {
+  font-family: var(--ff-body);
+  font-size: 1rem;
+  color: var(--clr-ink-2);
+  line-height: 1.85;
+  margin: 0;
+}
+
+/* Track grid */
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Make last track full-width if odd count */
+.music-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  max-width: 520px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Track card */
+.music-card {
+  background-color: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.music-card:hover {
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.1);
+  transform: translateY(-2px);
+}
+
+.music-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px 14px;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.music-card-number {
+  font-family: var(--ff-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--clr-ink-3);
+  flex-shrink: 0;
+}
+
+.music-card-title {
+  font-family: var(--ff-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--clr-ink);
+  margin: 0;
+  flex: 1;
+}
+
+.music-card-artist {
+  font-family: var(--ff-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--clr-ink-3);
+  flex-shrink: 0;
+}
+
+.music-player {
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+.music-card .soundcloud-attribution {
+  padding: 8px 20px 10px;
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .music-intro {
+    margin-bottom: 36px;
+    text-align: left;
+  }
+
+  .music-intro-title {
+    font-size: 1.4rem;
+  }
+
+  .music-intro-text {
+    font-size: 0.92rem;
+  }
+
+  .music-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .music-card:last-child:nth-child(odd) {
+    grid-column: auto;
+    max-width: 100%;
+    margin: 0;
+  }
+}

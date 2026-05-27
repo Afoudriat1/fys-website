@@ -1,60 +1,54 @@
 .bars-button {
   position: relative;
-  width: 240px;
-  height: 240px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
-  background-color: #000000;
+  background-color: var(--clr-ink);
   color: #ffffff;
-  border: 3px solid #000000;
+  border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  font-family: 'Arial Black', 'Arial Bold', sans-serif;
-  font-weight: 900;
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+              box-shadow 0.25s ease;
+  font-family: var(--ff-display);
+  font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.25);
 }
 
 .bars-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transform: scale(1.07);
+  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.35);
 }
 
 .bars-button.open {
-  transform: scale(0.9);
+  transform: scale(0.92);
 }
 
 .bars-text {
-  font-size: 1.4rem;
+  font-size: 1.15rem;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.35;
   padding: 20px;
 }
 
 .modal-backdrop {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   z-index: 2000;
-  animation: fadeIn 0.3s ease;
+  animation: fadeIn 0.25s ease;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .modal-container {
@@ -62,54 +56,54 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 240px;
-  height: 240px;
-  border-radius: 0;
-  background-color: #ffffff;
-  border: 3px solid #000000;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background-color: var(--clr-surface);
+  border: 1px solid var(--clr-border);
   z-index: 2001;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  transition: all 0.45s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 0 16px 48px rgba(15, 23, 42, 0.2);
 }
 
 .modal-container.expanded {
   width: 80vw;
   height: 80vh;
-  max-width: 800px;
-  max-height: 800px;
-  border-radius: 0;
+  max-width: 820px;
+  max-height: 780px;
+  border-radius: 12px;
   transform: translate(-50%, -50%);
 }
 
 .modal-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
+  top: 18px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  background-color: #000000;
-  color: #ffffff;
-  border: 2px solid #000000;
-  font-size: 2rem;
-  font-weight: 900;
+  background-color: var(--clr-bg);
+  color: var(--clr-ink);
+  border: 1px solid var(--clr-border);
+  font-size: 1.4rem;
+  font-weight: 500;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2002;
-  transition: all 0.3s ease;
+  transition: background-color 0.15s ease, transform 0.25s ease;
   line-height: 1;
   padding: 0;
 }
 
 .modal-close:hover {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: var(--clr-ink);
+  color: #ffffff;
   transform: rotate(90deg);
 }
 
@@ -123,13 +117,13 @@
 }
 
 .modal-title {
-  font-size: 2.5rem;
-  font-weight: 900;
-  letter-spacing: 0.2em;
+  font-family: var(--ff-display);
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-family: 'Arial Black', 'Arial Bold', sans-serif;
-  color: #000000;
-  margin: 0 0 30px 0;
+  color: var(--clr-ink);
+  margin: 0 0 28px 0;
   line-height: 1.2;
   text-align: center;
 }
@@ -137,8 +131,9 @@
 .modal-body {
   display: flex;
   flex: 1;
-  gap: 30px;
+  gap: 24px;
   align-items: stretch;
+  min-height: 0;
 }
 
 .modal-text-box {
@@ -146,80 +141,82 @@
   display: flex;
   align-items: flex-start;
   padding: 20px;
-  border: 2px solid #000000;
+  border: 1px solid var(--clr-border);
+  border-radius: 8px;
   min-width: 0;
+  overflow-y: auto;
 }
 
 .modal-text {
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: #000000;
-  line-height: 1.6;
+  font-family: var(--ff-body);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--clr-ink-2);
+  line-height: 1.8;
   margin: 0;
   width: 100%;
 }
 
 .modal-photo {
-  flex: 0 0 200px;
+  flex: 0 0 180px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #000000;
-  background-color: #f5f5f5;
+  border: 1px solid var(--clr-border);
+  border-radius: 8px;
+  background-color: var(--clr-bg);
 }
 
 .photo-placeholder {
-  font-size: 1.5rem;
-  font-weight: 900;
-  letter-spacing: 0.1em;
+  font-family: var(--ff-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-family: 'Arial Black', 'Arial Bold', sans-serif;
-  color: #999999;
+  color: var(--clr-ink-3);
 }
 
 @media (max-width: 768px) {
   .bars-button {
-    width: 200px;
-    height: 200px;
+    width: 190px;
+    height: 190px;
   }
 
   .bars-text {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .modal-container.expanded {
-    width: 90vw;
-    height: 90vh;
+    width: 92vw;
+    height: 88vh;
     max-width: none;
     max-height: none;
   }
 
   .modal-content {
-    padding: 50px 20px 20px;
+    padding: 52px 20px 20px;
   }
 
   .modal-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
   }
 
   .modal-body {
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
   }
 
   .modal-text-box {
-    padding: 15px;
+    padding: 14px;
   }
 
   .modal-text {
-    font-size: 1rem;
+    font-size: 0.92rem;
   }
 
-  .photo-placeholder {
-    font-size: 1.2rem;
-    padding: 40px;
+  .modal-photo {
+    flex: 0 0 120px;
+    padding: 24px;
   }
 }
-

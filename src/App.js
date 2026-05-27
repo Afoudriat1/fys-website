@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
+import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import Music from './pages/Music';
 import Donate from './pages/Donate';
@@ -10,11 +11,12 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <Navigation />
         <Routes>
           <Route path="/" element={<Layout><Home /></Layout>} />
           <Route path="/music" element={<Layout pageTitle="OUR MUSIC"><Music /></Layout>} />
           <Route path="/donate" element={<Layout pageTitle="DONATE"><Donate /></Layout>} />
-          <Route path="/contact" element={<Layout pageTitle="CONTACT"><Contact /></Layout>} />
+          <Route path="/contact" element={<Layout pageTitle="OUR COMMUNITY"><Contact /></Layout>} />
         </Routes>
       </div>
     </Router>

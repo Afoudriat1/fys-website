@@ -1,55 +1,9 @@
 .layout {
   min-height: 100vh;
-  background-color: #ffffff;
-  position: relative;
-  width: 100%;
+  background-color: var(--clr-bg);
 }
 
-.home-link {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  text-decoration: none;
-  color: #000000;
-  font-size: 1rem;
-  font-weight: 900;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  font-family: 'Arial Black', 'Arial Bold', sans-serif;
-  padding: 8px 16px;
-  border: 2px solid #000000;
-  background-color: #ffffff;
-  transition: all 0.3s ease;
-  z-index: 10;
-}
-
-.home-link:hover {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-.page-title-below-button {
-  font-size: 4rem;
-  font-weight: 900;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-family: 'Arial Black', 'Arial Bold', sans-serif;
-  color: #000000;
-  margin: 100px auto 40px;
-  line-height: 1.2;
-  text-align: center;
-  width: 100%;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
-.layout-header {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px 40px;
-  text-align: center;
-}
-
+/* Hero wrapper — full bleed */
 .title-background-wrapper {
   position: relative;
   text-align: center;
@@ -61,178 +15,149 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.title-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-.title-background-wrapper .title-content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
 }
 
 .header-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.15);
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.58) 100%
+  );
   z-index: 0;
 }
 
-.title-background-wrapper .main-title {
+.title-content {
   position: relative;
   z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
 }
 
 .main-title {
-  font-size: 4rem;
-  font-weight: 900;
-  letter-spacing: 0.2em;
+  font-family: var(--ff-display);
+  font-size: 3.25rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-family: 'Arial Black', 'Arial Bold', sans-serif;
-  color: #000000;
-  margin: 0 0 20px 0;
-  line-height: 1.2;
-}
-
-.title-background-wrapper .main-title {
   color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  margin-bottom: 30px;
+  margin: 0 0 16px 0;
+  line-height: 1.15;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
 }
 
 .mission-subheader {
-  font-size: 1.3rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-family: var(--ff-body);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.75;
+  max-width: 680px;
   position: relative;
   z-index: 1;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.title-background-wrapper .mission-subheader {
-  font-size: 2.2rem;
+/* Layout header area — home page content below hero */
+.layout-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 32px 56px;
+  text-align: center;
 }
 
-.home-subheader {
-  font-size: 2rem;
-  font-weight: 900;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-family: 'Arial Black', 'Arial Bold', sans-serif;
-  color: #000000;
-  margin: 30px 0 80px 0;
-  line-height: 1.2;
-}
-
-.nav-buttons {
+/* Home page nav buttons */
+.layout-header .nav-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1in;
-  margin-top: 0;
-  margin-bottom: 0;
-  width: 100%;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-
-.nav-button {
+.layout-header .nav-button {
   text-decoration: none;
-  color: #000000;
-  font-size: 1.2rem;
-  font-weight: 900;
-  letter-spacing: 0.1em;
+  font-family: var(--ff-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-family: 'Arial Black', 'Arial Bold', sans-serif;
-  padding: 12px 40px;
-  border: 3px solid #000000;
-  background-color: #ffffff;
-  transition: all 0.3s ease;
+  padding: 13px 36px;
+  border-radius: 6px;
+  border: 1.5px solid var(--clr-border-strong);
+  background-color: var(--clr-surface);
+  color: var(--clr-ink);
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
   cursor: pointer;
   display: inline-block;
 }
 
-.nav-button:hover {
-  background-color: #000000;
+.layout-header .nav-button:hover {
+  border-color: var(--clr-ink);
+  background-color: var(--clr-ink);
   color: #ffffff;
 }
 
-.nav-button.active {
-  background-color: #000000;
+.layout-header .nav-button:first-child {
+  background-color: var(--clr-amber);
+  border-color: var(--clr-amber);
   color: #ffffff;
 }
 
+.layout-header .nav-button:first-child:hover {
+  background-color: var(--clr-amber-dark);
+  border-color: var(--clr-amber-dark);
+}
+
+/* About section */
 .about-section {
-  max-width: 800px;
-  margin: 40px auto 0;
-  padding-top: 40px;
-  border-top: 3px solid #000000;
+  max-width: 720px;
+  margin: 52px auto 0;
+  padding-top: 48px;
+  border-top: 1px solid var(--clr-border);
 }
 
 .about-title {
-  font-size: 2rem;
-  font-weight: 900;
-  letter-spacing: 0.15em;
+  font-family: var(--ff-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-family: 'Arial Black', 'Arial Bold', sans-serif;
-  color: #000000;
-  margin: 0 0 20px 0;
+  color: var(--clr-amber);
+  margin: 0 0 14px 0;
 }
 
 .about-text {
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: #000000;
-  line-height: 1.6;
+  font-family: var(--ff-body);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--clr-ink-2);
+  line-height: 1.85;
   margin: 0;
 }
 
+/* Layout content area */
 .layout-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px 60px;
+  padding: 48px 32px 80px;
 }
 
+/* ---- Responsive ---- */
 @media (max-width: 768px) {
-  .home-link {
-    top: 10px;
-    left: 10px;
-    font-size: 0.75rem;
-    padding: 6px 10px;
-    letter-spacing: 0.1em;
-  }
-
-  .page-title-below-button {
-    font-size: 2rem;
-    letter-spacing: 0.1em;
-    margin: 70px auto 30px;
-    padding: 0 15px;
-    word-wrap: break-word;
-  }
-
-  .layout-header {
-    padding: 30px 15px 20px;
-  }
-
   .title-background-wrapper {
-    padding: 60px 15px !important;
-    min-height: 300px !important;
+    padding: 60px 16px !important;
+    min-height: 260px !important;
     width: 100% !important;
     left: 0 !important;
     right: 0 !important;
@@ -240,113 +165,62 @@
     margin-right: 0 !important;
   }
 
+  .title-content {
+    padding: 0 16px;
+  }
+
   .main-title {
     font-size: 2rem;
-    letter-spacing: 0.1em;
-    margin-bottom: 15px;
-    padding: 0 10px;
-    word-wrap: break-word;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
   }
 
   .mission-subheader {
-    font-size: 1rem;
-    padding: 0 15px;
-    line-height: 1.5;
+    font-size: 0.95rem;
+    line-height: 1.65;
   }
 
-  .title-background-wrapper .mission-subheader {
-    font-size: 1.2rem;
-    padding: 0 15px;
+  .layout-header {
+    padding: 32px 20px 40px;
   }
 
-  .home-subheader {
-    font-size: 1.3rem;
-    letter-spacing: 0.1em;
-    margin: 20px 0 40px 0;
-    padding: 0 15px;
-  }
-
-  .nav-buttons {
+  .layout-header .nav-buttons {
     flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    margin-top: 40px;
-    margin-bottom: 30px;
-    padding: 0 15px;
+    gap: 10px;
   }
 
-  .nav-button {
+  .layout-header .nav-button {
     width: 100%;
     text-align: center;
     padding: 14px 20px;
-    font-size: 1rem;
   }
 
   .about-section {
-    padding-top: 25px;
-    margin: 30px 15px 0;
-  }
-
-  .about-title {
-    font-size: 1.3rem;
+    margin-top: 36px;
+    padding-top: 32px;
   }
 
   .about-text {
     font-size: 0.95rem;
-    padding: 0 10px;
-    line-height: 1.6;
   }
 
   .layout-content {
-    padding: 30px 15px 40px;
+    padding: 32px 20px 60px;
   }
 }
 
 @media (max-width: 480px) {
-  .home-link {
-    font-size: 0.7rem;
-    padding: 5px 8px;
-    top: 8px;
-    left: 8px;
-  }
-
   .main-title {
-    font-size: 1.6rem;
-    letter-spacing: 0.08em;
+    font-size: 1.65rem;
+    letter-spacing: 0.07em;
   }
 
   .title-background-wrapper {
-    padding: 50px 10px !important;
-    min-height: 250px !important;
-    width: 100% !important;
-    left: 0 !important;
-    right: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    padding: 48px 12px !important;
+    min-height: 220px !important;
   }
 
   .mission-subheader {
-    font-size: 0.9rem;
-    padding: 0 10px;
-  }
-
-  .title-background-wrapper .mission-subheader {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
-
-  .nav-button {
-    font-size: 0.9rem;
-    padding: 12px 16px;
-  }
-
-  .about-text {
-    font-size: 0.9rem;
-  }
-
-  .page-title-below-button {
-    font-size: 1.6rem;
-    margin: 60px auto 25px;
+    font-size: 0.88rem;
   }
 }
-
