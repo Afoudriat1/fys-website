@@ -68,14 +68,14 @@ function Contact() {
         <div className="contact-info-section">
           <div className="contact-header">
             <div className="contact-name-row">
-              <h2 className="contact-name">LENNY BASS</h2>
+              <h2 className="contact-name">LENNON BASS JR.</h2>
               <span className="contact-title">ADVISORY BOARD MEMBER</span>
             </div>
             <p className="contact-about">
-              Lenny Bass is a Case Manager at Family of Woodstock, Inc., bringing prior experience within the organization as well as a strong background in youth and community services. He completed his studies at Bard College (2022–2025), further strengthening his academic foundation in human services and related fields.
+              Lennon Bass Jr. is a Master of Social Work (MSW) candidate at the University at Albany (SUNY) specializing in trauma-informed care, youth advocacy, and restorative justice. After a successful 30-year career as a director and cinematographer collaborating with global artists, Lennon chose to pivot his lifelong dedication to human storytelling into a career in clinical practice.
             </p>
             <p className="contact-about" style={{ marginTop: '12px' }}>
-              In addition to his work in case management, Lenny brings extensive experience in film and media production, having worked as a director and videographer. His professional skill set includes film production, video production, post-production, and commercial content development, allowing him to contribute a creative and technical perspective to his work with youth and community programming.
+              Currently serving as a Case Manager for the Restorative Justice Program at Family of Woodstock, he guides adolescents through accountability and healing, while also providing peer mentorship to formerly incarcerated men through All Kings. As a certified 500-hour yoga and meditation teacher, Lennon integrates somatic mindfulness into his community work, bringing a unique blend of creative empathy, multi-generational engagement, and holistic wellness to his practice.
             </p>
           </div>
         </div>
@@ -93,7 +93,7 @@ function Contact() {
           <div className="contact-header">
             <div className="contact-name-row">
               <h2 className="contact-name">ZACH "MAUI" JONES</h2>
-              <span className="contact-title">VOLUNTEER COMMUNITY PARTNER</span>
+              <span className="contact-title">ADVISORY BOARD MEMBER</span>
             </div>
             <p className="contact-about">
               Zach "Maui" Jones brings over 15 years of experience leading and facilitating outdoor education programs for at-risk youth across New York State. His work has taken young people out of challenging environments and into transformative natural spaces, using the outdoors as a powerful tool for growth, resilience, and self-discovery.
