@@ -17,6 +17,19 @@
 }
 
 /* Donate page */
+.donate-thank-you-banner {
+  max-width: 680px;
+  margin: 28px auto 0;
+  padding: 16px 24px;
+  background-color: var(--clr-ink);
+  color: #FFFFFF;
+  font-family: var(--ff-body);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 6px;
+}
+
 .donate-form-embed {
   position: relative;
   max-width: 680px;

@@ -8,6 +8,7 @@ const TOKEN_KEY = 'neon-frt-goodworkinstituteprojects-embed-token';
 function Donate() {
   const [iframeSrc, setIframeSrc] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [donationComplete, setDonationComplete] = useState(false);
   const iframeRef = useRef(null);
 
   useEffect(() => {
@@ -34,6 +35,7 @@ function Donate() {
       resultUrl.searchParams.set('embedToken', embedToken);
       src = resultUrl.toString();
       sessionStorage.setItem(EMBED_IFRAME_ID, 'true');
+      setDonationComplete(true);
     }
 
     setIframeSrc(src);
@@ -113,6 +115,11 @@ function Donate() {
         <p className="page-description">
           Your support helps us continue to offer free programs for incarcerated youth. Every dollar raised gives youth direct access to rehabilitative and life changing programs.
         </p>
+        {donationComplete && (
+          <div className="donate-thank-you-banner" role="status">
+            Thank you for your contribution!
+          </div>
+        )}
         <div className="donate-form-embed">
           {loading && (
             <div className="donate-form-loading">
